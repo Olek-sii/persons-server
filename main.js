@@ -7,6 +7,9 @@ function factory(format, param) {
 	} else if (format == 'html') {
 		reader = new HtmlReader(param);
 	}
+	else if (format == 'yaml') {
+		reader = new YamlReader(param);
+	}
 	return reader;
 }
 
