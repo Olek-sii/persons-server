@@ -52,4 +52,13 @@
 			return $res . '</tbody>';
 		}
 	}
+
+    class YamlConverter implements Converter
+    {
+        public function convert($obj)
+        {
+            $yaml = yaml_emit($obj);
+            return $yaml;
+        }
+    }
 ?>

@@ -30,6 +30,9 @@ class FormatterFactory {
 			case "xml":
 				$res = new XmlFormatter();
 				break;
+            case "yaml":
+                $res = new YamlFormatter();
+                break;
 		}
 		return $res;
     }

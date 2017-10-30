@@ -79,3 +79,14 @@ class HtmlReader extends Reader{
 		return this.serverResponce;
 	}
 }
+
+
+class YamlReader extends Reader{
+    constructor(serverResponce) {
+        super(serverResponce);
+    }
+
+    getResponce() {
+        return yaml_parse(this.serverResponce);
+    }
+}

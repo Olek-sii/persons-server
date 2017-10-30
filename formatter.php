@@ -38,5 +38,11 @@ class XmlFormatter implements IFormatter {
 		}
 	}
 }
+
+class YamlFormatter implements IFormatter {
+    public function format($obj) {
+        return yaml_emit($obj);
+    }
+}
 ?>
 
