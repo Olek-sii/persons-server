@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="reader.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<th>Id</th>
+			<th>Fn</th>
+			<th>Ln</th>
+			<th>Age</th>
+			<th>Numbers</th>
+		</thead>
+		<tbody id="tbody">
+			
+		</tbody>
+	</table> <br>
+	<input type="text" id="id">
+	<input type="text" id="fn">
+	<input type="text" id="ln">
+	<input type="text" id="age"> <br>
+	<button onclick="create()">Create</button>
+	<button onclick="read()">Read</button>
+	<button onclick="update()">Update</button>
+	<button onclick="del()">Delete</button> <br>
+	<select id="format">
+		<option value="json">Json</option>
+		<option value="html">HTML</option>	
+		<option value="xml">XML</option>
+	</select>
+	<select id="db">
+		<option value="mock">Mock</option>
+		<option value="mysql">MySql</option>
+	</select> <br><br>
+	
+	<label>Add Phone Number for Person by ID:</label><br><br>
+	Id: <input type="text" id="id_person">
+	Phone Number: <input type="number" id="num">
+	<button onclick="addPhone()">Add</button>
+</body>
+</html>
