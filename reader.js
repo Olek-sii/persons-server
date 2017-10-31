@@ -1,3 +1,7 @@
+/*<script type="text/jsx" src="./js-yaml.min.js"></script>*/
+
+var yaml = require('js-yaml');
+
 class Reader {
 	constructor(serverResponce) {
 		this.serverResponce = serverResponce;
@@ -87,6 +91,6 @@ class YamlReader extends Reader{
     }
 
     getResponce() {
-        return yaml_parse(this.serverResponce);
+        return jsyaml.load(this.serverResponce);
     }
 }
