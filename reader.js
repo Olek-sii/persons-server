@@ -91,7 +91,8 @@ class YamlReader extends Reader{
 
         var table = document.getElementById('personsTable').getElementsByTagName('tbody')[0];
         table.innerHTML = "";
-        for(var i = 1; i < arr.length; i+=4)
+        console.log(arr);
+        for(var i = 2; i < arr.length; i+=4)
         {
             var newRow = table.insertRow(table.rows.length);
 
@@ -105,6 +106,6 @@ class YamlReader extends Reader{
             cellLn.appendChild(document.createTextNode(arr[i + 2].split(' ').pop()));
             cellAge.appendChild(document.createTextNode(arr[i + 3].split(' ').pop()));
         }
-        return table.innerHTML;
+        return table;
     }
 }

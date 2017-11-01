@@ -14,12 +14,12 @@ class DBTests extends TestCase
         $this->persons = array();
         $this->person = new Person(2,"Petra","Ivanovna",24, array());
         $this->db = new MockDB();
-        $this->db->create($this->person);
         array_push($this->persons, $this->person);
     }
 
     public function testCreate()
     {
+        $this->db->create($this->person);
         $exp = $this->persons;
         $res = $this->db->read();
         $this->assertEquals($exp, $res);
