@@ -1,5 +1,5 @@
 {
-  "name": "webdev/package_name",
+  "name": "persons-server/persons-server",
   "description": "description_text",
   "minimum-stability": "stable",
   "license": "proprietary",

@@ -10,7 +10,7 @@
 		
 		$db = $_GET['db'];
 		$connection = PersonDAOFactory::GetDB($db);		
-		$connection->create(new Person(0, $fn, $ln, $age));
+		$connection->create(new Person(0, $fn, $ln, $age, array()));
 	}
 
 	if ($_GET['method'] == 'read')
@@ -34,7 +34,7 @@
 		
 		$db = $_GET['db'];
 		$connection = PersonDAOFactory::GetDB($db);		
-		$connection->update(new Person($id, $fn, $ln, $age));
+		$connection->update(new Person($id, $fn, $ln, $age, array()));
 	}
 
 	if ($_GET['method'] == 'delete')
@@ -43,7 +43,7 @@
 		
 		$db = $_GET['db'];
 		$connection = PersonDAOFactory::GetDB($db);		
-		$connection->del(new Person($id, "","",0));
+		$connection->del(new Person($id, "","",0, array()));
 	}
 	
 	if ($_GET['method'] == 'add_phone')

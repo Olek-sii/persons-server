@@ -89,7 +89,7 @@ class MockDB implements IPersonDAO
 	}
 	
 	public function addPhoneNumber($person, $number) {
-		
+        array_push($this->persons[$person->id]->numbers, $number);
 	}	
 }
 
