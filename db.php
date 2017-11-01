@@ -69,7 +69,7 @@ class MockDB implements IPersonDAO
 	
 	function __construct() {
 		$this->persons = array();
-		array_push($this->persons, new Person(1,"Petr","Ivan",42, array()));
+		//array_push($this->persons, new Person(1,"Petr","Ivan",42, array()));
 	}
 
     public function create($person){

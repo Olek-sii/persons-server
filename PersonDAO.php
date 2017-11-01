@@ -1,14 +1,14 @@
 <?php
 	include_once 'factory.php';
 
-	interface IPersonDAO {
+	interface IPersonDAOF {
 		function  create($person);
 		function read($format);
 		function update($person);
 		function delete($person);
 	}
 
-	class MySql implements IPersonDAO
+	class MySql implements IPersonDAOF
 	{
 		private $username = "root";
 		private $password = "";

@@ -1,7 +1,3 @@
-/*<script type="text/jsx" src="./js-yaml.min.js"></script>*/
-
-var yaml = require('js-yaml');
-
 class Reader {
 	constructor(serverResponce) {
 		this.serverResponce = serverResponce;
@@ -91,6 +87,24 @@ class YamlReader extends Reader{
     }
 
     getResponce() {
-        return jsyaml.load(this.serverResponce);
+        var arr = this.serverResponce.split('\n');
+
+        var table = document.getElementById('personsTable').getElementsByTagName('tbody')[0];
+        table.innerHTML = "";
+        for(var i = 1; i < arr.length; i+=4)
+        {
+            var newRow = table.insertRow(table.rows.length);
+
+            var cellId = newRow.insertCell(0);
+            var cellFn = newRow.insertCell(1);
+            var cellLn = newRow.insertCell(2);
+            var cellAge = newRow.insertCell(3);
+
+            cellId.appendChild(document.createTextNode(arr[i].split(' ').pop()));
+            cellFn.appendChild(document.createTextNode(arr[i + 1].split(' ').pop()));
+            cellLn.appendChild(document.createTextNode(arr[i + 2].split(' ').pop()));
+            cellAge.appendChild(document.createTextNode(arr[i + 3].split(' ').pop()));
+        }
+        return table.innerHTML;
     }
 }
