@@ -1,5 +1,3 @@
-<script src="reader.js"></script>
-
 function factory(format, param) {
 	var reader;
 	if (format == 'json') {

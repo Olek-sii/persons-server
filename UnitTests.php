@@ -39,7 +39,7 @@ class DBTests extends TestCase
         $person = new Person(2,"Petra","Ivanovna",24, array());
         $this->db->del($person);
         $res = $this->db->read();
-        array_diff($this->persons, $person);
+        array_push($this->persons, $person);
         $exp = $this->persons;
         $this->assertEquals($exp, $res);
     }
